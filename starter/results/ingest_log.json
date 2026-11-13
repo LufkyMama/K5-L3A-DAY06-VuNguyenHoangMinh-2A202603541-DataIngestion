@@ -1,0 +1,17 @@
+{
+  "source": "data/corpus/Introduction_to_Python_Programming-WEB.pdf",
+  "pages_read": 397,
+  "selected_range": "95-174",
+  "empty_pages": [
+    1,
+    2
+  ],
+  "error_pages": {},
+  "excluded_in_range_below_200_chars": [
+    124,
+    146,
+    174
+  ],
+  "counted_pages": 77,
+  "counted_chars": 86765
+}

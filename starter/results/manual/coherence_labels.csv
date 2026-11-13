@@ -1,0 +1,269 @@
+﻿position_id,page,anchor_line,strategy,chunk_id,chunk_text,score,reason
+pos01,95,A branch is a group of statements that execute based on a condition. The Expressions chapter introduced,A,openstax-intro-python:p095:fixed500o50:001,"nstead of always taking the left path, a program uses the path
+width to decide which path to take. If the left path is wider, take the right path. Else, take the left path.
+A branch is a group of statements that execute based on a condition. The Expressions chapter introduced
+expressions. This chapter explores how expressions can be used as conditions to make decisions in programs.
+4.1 Boolean values
+Learning objectives
+By the end of this section you should be able to
+• Explain a Boolean value.",1,Starts mid-word ('nstead of...'); anchor sentence complete but chunk mixes chapter intro with 4.1 learning objectives.
+pos01,95,A branch is a group of statements that execute based on a condition. The Expressions chapter introduced,B,openstax-intro-python:p095:para500:003,"A branch is a group of statements that execute based on a condition. The Expressions chapter introduced
+expressions. This chapter explores how expressions can be used as conditions to make decisions in programs.",2,Two complete sentences defining a branch and the chapter purpose; readable alone.
+pos02,96,Consider the following code:,A,openstax-intro-python:p096:fixed500o50:001,"walk sign; ch 4, video 1 (https://www.openstax.org/r/crosswalk-sign)
+CONCEPTS IN PRACTICE
+Using Boolean variables
+Consider the following code:
+is_fruit = ""True""
+is_vegetable = 0
+is_dessert = False
+1 . What is the data type of is_fruit?
+a. Boolean
+b. integer
+c. string
+2 . What is the data type of is_vegetable?
+a. Boolean
+b. integer
+c. string
+3 . What is the data type of is_dessert?
+a. Boolean
+b. integer
+c. string
+4 . How many values can a Boolean variable represent?
+a. 2
+b. 4
+c. 8
+5 . Which is a",1,"Starts with a fragment of a video link ('walk sign; ch 4, video 1'); quiz cut mid-question ('5 . Which is a')."
+pos02,96,Consider the following code:,B,openstax-intro-python:p096:para500:002,"Using Boolean variables
+Consider the following code:
+is_fruit = ""True""
+is_vegetable = 0
+is_dessert = False
+1 . What is the data type of is_fruit?
+a. Boolean
+b. integer
+c. string
+2 . What is the data type of is_vegetable?
+a. Boolean
+b. integer
+c. string
+3 . What is the data type of is_dessert?
+a. Boolean
+b. integer
+c. string
+4 . How many values can a Boolean variable represent?
+a. 2
+b. 4
+c. 8
+5 . Which is a valid value for a Boolean variable?",1,"Code and questions 1-4 complete, but question 5 has no answer options (in next chunk)."
+pos03,97,"Converting integers, floats, and strings using bool()",A,openstax-intro-python:p097:fixed500o50:001,"ty string
+• False: 0, empty string
+CHECKPOINT
+Converting integers, floats, and strings using bool()
+Converting integers, floats, and strings using bool(); ch 4, video 2 (https://www.openstax.org/r/converting-
+using-bool)
+CONCEPTS IN PRACTICE
+Converting numeric types and strings to Booleans
+7 . bool(0.000)
+a. True
+b. False
+8 . bool(-1)
+a. True
+b. False
+9 . bool("""")
+a. True
+b. False
+10 . bool(""0"")
+a. True
+b. False
+11 . Given input False, what is bool(input())?
+a. True
+b. False
+4.1 • Boolean values",1,Starts mid-word ('ty string'); bool() rule half missing; quiz 7-11 complete but mixed with checkpoint text.
+pos03,97,"Converting integers, floats, and strings using bool()",B,openstax-intro-python:p097:para500:001,"CHECKPOINT
+Converting integers, floats, and strings using bool()
+Converting integers, floats, and strings using bool(); ch 4, video 2 (https://www.openstax.org/r/converting-
+using-bool)",1,Self-contained but only a checkpoint/video title and link; no explanatory content.
+pos04,98,The 6 comparison operators:,A,openstax-intro-python:p098:fixed500o50:001,"lues,
+and the result is either true or false. Ex: is_admin = (user == ""admin""). user is compared with ""admin""
+using the == operator, which tests for equality. The Boolean variable, is_admin, is assigned with the Boolean
+result.
+The 6 comparison operators:
+• equal to: ==
+• not equal to: !=
+• greater than: >
+• less than: <
+• greater than or equal to: >=
+• less than or equal to: <=
+CHECKPOINT
+Example: Rolling a d20 in a tabletop game
+Example: Rolling a d20 in a tabletop game; ch 4, video 3 (https:/",1,"Starts mid-word ('lues,'); operator list complete but ends with a truncated checkpoint URL."
+pos04,98,The 6 comparison operators:,B,openstax-intro-python:p098:para500:002,"The 6 comparison operators:
+• equal to: ==
+• not equal to: !=
+• greater than: >
+• less than: <
+• greater than or equal to: >=
+• less than or equal to: <=",2,Heading plus the full list of 6 comparison operators; understandable alone.
+pos05,99,"is_zero and num with 0, regardless of num's original value. The = operator performs assignment and will",A,openstax-intro-python:p099:fixed500o50:000,"b. False
+16 . w = 0
+compare_result = (w != 0.4)
+a. True
+b. False
+17 . v = 4
+compare_result = (v < 4.0)
+a. True
+b. False
+18 . y = 2
+compare_result = (y > ""ab"")
+a. True
+b. False
+c. Error
+19 . z = ""cilantro""
+compare_result = (z == ""coriander"")
+a. True
+b. False
+20 . a = ""dog""
+compare_result = (a < ""cat"")
+a. True
+b. False
+= VS ==
+A common mistake is using = for comparison instead of ==. Ex: is_zero = num=0 will always assign
+is_zero and num with 0, regardless of num's original value. The = operator p",1,Mostly quiz items (starts with an orphan 'b. False'); '= VS ==' explanation cut mid-word ('The = operator p').
+pos05,99,"is_zero and num with 0, regardless of num's original value. The = operator performs assignment and will",B,openstax-intro-python:p099:para500:000,"b. False
+16 . w = 0
+compare_result = (w != 0.4)
+a. True
+b. False
+17 . v = 4
+compare_result = (v < 4.0)
+a. True
+b. False
+18 . y = 2
+compare_result = (y > ""ab"")
+a. True
+b. False
+c. Error
+19 . z = ""cilantro""
+compare_result = (z == ""coriander"")
+a. True
+b. False
+20 . a = ""dog""
+compare_result = (a < ""cat"")
+a. True
+b. False
+= VS ==
+A common mistake is using = for comparison instead of ==. Ex: is_zero = num=0 will always assign
+is_zero and num with 0, regardless of num's original value.",1,"Same quiz block; '= VS ==' explanation stops after the example, the reason (= assigns, == compares) is in the next chunk. Heading '= VS ==' not detected because it contains '='."
+pos06,100,• Create an if-else statement to perform an operation when a condition is true and another operation,A,openstax-intro-python:p100:fixed500o50:002,"nts is run.
+• Identify the components of an if and if-else statement and the necessary formatting.
+• Create an if-else statement to perform an operation when a condition is true and another operation
+otherwise.
+if statement
+If the weather is rainy, grab an umbrella! People make decisions based on conditions like if the weather is
+rainy, and programs perform operations based on conditions like a variable's value. Ex: A program adds two
+numbers. If the result is negative, the program prints an err",1,Starts with fragment 'nts is run.'; learning objectives partial; 'if statement' intro cut ('prints an err').
+pos06,100,• Create an if-else statement to perform an operation when a condition is true and another operation,B,openstax-intro-python:p100:para500:002,"4.2 If-else statements
+Learning objectives
+By the end of this section you should be able to
+• Identify which operations are performed when a program with if and if-else statements is run.
+• Identify the components of an if and if-else statement and the necessary formatting.
+• Create an if-else statement to perform an operation when a condition is true and another operation
+otherwise.",2,Section heading 4.2 with its complete learning objectives list.
+pos07,101,"1 print(""Have a great day."")",A,openstax-intro-python:p101:fixed500o50:001,"print(""Discount for children available"")
+a. age
+b. age < 12
+c. print(""Discount for children available"")
+2 . Given the following, which lines execute if the condition is true?
+1 print(""Have a great day."")
+2 if is_raining:
+3 print(""Don't forget an umbrella!"")
+4 print(""See you soon."")
+a. 1, 2, 3
+b. 1, 2, 4
+c. 1, 2, 3, 4
+3 . Given the following (same as above), which lines execute if the condition is False?
+1 print(""Have a great day."")
+2 if is_raining:
+3 print(""Don't forget an umbrella!"")
+4 print(""",1,Starts with an option of the previous question without its stem; question 3 cut off.
+pos07,101,"1 print(""Have a great day."")",B,openstax-intro-python:p101:para500:002,"1 print(""Have a great day."")
+2 if is_raining:
+3 print(""Don't forget an umbrella!"")
+4 print(""See you soon."")
+a. 1, 2, 3
+b. 1, 2, 4
+c. 1, 2, 3, 4
+3 . Given the following (same as above), which lines execute if the condition is False?
+1 print(""Have a great day."")
+2 if is_raining:
+3 print(""Don't forget an umbrella!"")
+4 print(""See you soon."")
+a. 1, 2, 3
+b. 1, 2, 4
+c. 1, 2, 3, 4
+4 . Given num = -10, what is the final value of num?
+if num < 0:
+num = 25
+if num < 100:
+4.2 • If-else statements 91",1,Code of question 2 without the question text (in previous chunk); question 4 cut; ends with footer.
+pos08,102,"is taken. That is, the body of the if or the body of the else is executed. Note: The else statement is at the",A,openstax-intro-python:p102:fixed500o50:001,"ay, we'll walk. Else, we'll
+drive.
+An else statement is used with an if statement and contains a body of statements that is executed when the
+if statement's condition is false. When an if-else statement is executed, one and only one of the branches
+is taken. That is, the body of the if or the body of the else is executed. Note: The else statement is at the
+same level of indentation as the if statement, and the body is indented.
+if-else statement template:
+1 # Statements before
+2
+3 if condition:",1,"Starts with fragment 'ay, we'll walk.'; else definition complete; if-else template cut after line 3."
+pos08,102,"is taken. That is, the body of the if or the body of the else is executed. Note: The else statement is at the",B,openstax-intro-python:p102:para500:001,"An else statement is used with an if statement and contains a body of statements that is executed when the
+if statement's condition is false. When an if-else statement is executed, one and only one of the branches
+is taken. That is, the body of the if or the body of the else is executed. Note: The else statement is at the
+same level of indentation as the if statement, and the body is indented.",2,Complete paragraph defining the else statement and its indentation rule.
+pos09,103,a new denominator (with no prompt) if the denominator is 0.,A,openstax-intro-python:p103:fixed500o50:000,"if x >= 15:
+# Do something
+else:
+# Do something else
+a. x >= 15
+b. x <= 15
+c. x < 15
+7 . Given x = 40, what is the final value of y?
+if x > 30:
+y = x - 10
+else:
+y = x + 10
+a. 30
+b. 40
+c. 50
+8 . Given y = 50, which is not a possible final value of y?
+if x < 50:
+y = y / 2
+else:
+y = y * 2
+y = y + 5
+a. 30
+b. 55
+c. 105
+Improved division
+The following program divides two integers. Division by 0 produces an error. Modify the program to read in
+a new denominator (with no prompt) if the denominator is 0.",1,"Starts with code of question 6 without its stem; rest (questions 7-8, exercise) complete."
+pos09,103,a new denominator (with no prompt) if the denominator is 0.,B,openstax-intro-python:p103:para500:001,"Improved division
+The following program divides two integers. Division by 0 produces an error. Modify the program to read in
+a new denominator (with no prompt) if the denominator is 0.
+Access multimedia content (http://openstax.org/books/introduction-python-programming/pages/4-2-if-
+else-statements)",2,Complete 'Improved division' exercise with its link; the referenced program is interactive and not in the PDF (source limitation).
+pos10,104,Logical operator: and,A,openstax-intro-python:p104:fixed500o50:001,"ng objectives
+By the end of this section you should be able to
+• Explain the purpose of logical operators.
+• Describe the truth tables for and, or, and not.
+• Create expressions with logical operators.
+• Interpret if-else statements with conditions using logical operators.
+Logical operator: and
+Decisions are often based on multiple conditions. Ex: A program printing if a business is open may check that
+hour >= 9 and hour < 17. A logical operator takes condition operand(s) and produces True or Fa",1,Starts mid-word ('ng objectives'); and-operator explanation cut mid-word ('True or Fa').
+pos10,104,Logical operator: and,B,openstax-intro-python:p104:para500:002,"Logical operator: and
+Decisions are often based on multiple conditions. Ex: A program printing if a business is open may check that
+hour >= 9 and hour < 17. A logical operator takes condition operand(s) and produces True or False.
+Python has three logical operators: and, or, and not. The and operator takes two condition operands and
+returns True if both conditions are true.
+p q p and q",2,"Heading, definition of logical operators and of 'and' complete; only the truth table rows continue in the next chunk."

@@ -1,0 +1,85 @@
+{
+  "run_at_utc": "2026-11-13T10:27:38+00:00",
+  "split": "dev",
+  "model": "text-embedding-3-small",
+  "dimensions": 1536,
+  "search": "exact cosine (pgvector <=>), no ANN index",
+  "top_k": 3,
+  "corpus_pages": 77,
+  "ingest": {
+    "A": {
+      "chunks": 224,
+      "embed_seconds": 5.19,
+      "embed_tokens": 25894,
+      "rows_in_store": 224
+    },
+    "B": {
+      "chunks": 357,
+      "embed_seconds": 2.36,
+      "embed_tokens": 23705,
+      "rows_in_store": 357
+    },
+    "C": {
+      "chunks": 357,
+      "embed_seconds": 0.0,
+      "embed_tokens": 0,
+      "note": "reuses B chunks and vectors",
+      "rows_in_store": 357
+    }
+  },
+  "query_tokens": 254,
+  "total_tokens": 49853,
+  "estimated_cost_usd": 0.000997,
+  "metrics": {
+    "A": {
+      "dev": {
+        "n": 15,
+        "hit_at_1": "6/15",
+        "hit_at_3": "11/15",
+        "hit_at_1_rate": 0.4,
+        "hit_at_3_rate": 0.733,
+        "filter_compliance": "3/3",
+        "missed": [
+          "q07",
+          "q08",
+          "q11",
+          "q15"
+        ]
+      }
+    },
+    "B": {
+      "dev": {
+        "n": 15,
+        "hit_at_1": "6/15",
+        "hit_at_3": "10/15",
+        "hit_at_1_rate": 0.4,
+        "hit_at_3_rate": 0.667,
+        "filter_compliance": "3/3",
+        "missed": [
+          "q02",
+          "q05",
+          "q07",
+          "q08",
+          "q11"
+        ]
+      }
+    },
+    "C": {
+      "dev": {
+        "n": 15,
+        "hit_at_1": "6/15",
+        "hit_at_3": "10/15",
+        "hit_at_1_rate": 0.4,
+        "hit_at_3_rate": 0.667,
+        "filter_compliance": "3/3",
+        "missed": [
+          "q02",
+          "q05",
+          "q07",
+          "q08",
+          "q11"
+        ]
+      }
+    }
+  }
+}

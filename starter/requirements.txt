@@ -2,3 +2,5 @@
 psycopg[binary]==3.3.8
 pypdf>=5,<7
 python-dotenv>=1,<2
+# Embedding provider chosen for this submission (OpenAI text-embedding-3-small).
+openai==3.50.0

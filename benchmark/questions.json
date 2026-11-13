@@ -1,0 +1,223 @@
+[
+  {
+    "id": "q01",
+    "split": "dev",
+    "type": "direct",
+    "question": "Which values does bool() convert to False?",
+    "expected_answer": "0 and the empty string; any non-zero number or non-empty string becomes True.",
+    "gold_source_id": "openstax-intro-python",
+    "gold_page": [97],
+    "evidence_quote": "• True: any non-zero number, any non-empty string • False: 0, empty string",
+    "filter": null
+  },
+  {
+    "id": "q02",
+    "split": "dev",
+    "type": "paraphrase",
+    "question": "Why does writing is_zero = num=0 not check whether num is zero?",
+    "expected_answer": "Because = performs assignment and modifies the variable; == is the operator that compares and produces True or False.",
+    "gold_source_id": "openstax-intro-python",
+    "gold_page": [99],
+    "evidence_quote": "The = operator performs assignment and will modify the variable. The == operator performs comparison, does not modify the variable, and produces True or False.",
+    "filter": null
+  },
+  {
+    "id": "q03",
+    "split": "dev",
+    "type": "direct",
+    "question": "How many spaces per indentation level does PEP 8 recommend for the body of an if statement?",
+    "expected_answer": "Four spaces.",
+    "gold_source_id": "openstax-intro-python",
+    "gold_page": [100],
+    "evidence_quote": "The PEP 8 style guide recommends four spaces per indentation level.",
+    "filter": null
+  },
+  {
+    "id": "q04",
+    "split": "dev",
+    "type": "condition",
+    "question": "When an if-else statement runs, can both the if body and the else body be executed?",
+    "expected_answer": "No. One and only one of the branches is taken.",
+    "gold_source_id": "openstax-intro-python",
+    "gold_page": [102],
+    "evidence_quote": "When an if-else statement is executed, one and only one of the branches is taken.",
+    "filter": null
+  },
+  {
+    "id": "q05",
+    "split": "dev",
+    "type": "condition",
+    "question": "Most operators are evaluated left to right. Which operator is the main exception, and how is 2 ** 3 ** 4 evaluated?",
+    "expected_answer": "Exponentiation is right associative, so 2 ** 3 ** 4 is evaluated as 2 ** (3**4).",
+    "gold_source_id": "openstax-intro-python",
+    "gold_page": [109],
+    "evidence_quote": "Exponentiation is the main exception (noted above) and is right associative: that is, evaluated from right to left. Ex: 2 ** 3 ** 4 is evaluated as 2 ** (3**4).",
+    "filter": null
+  },
+  {
+    "id": "q06",
+    "split": "dev",
+    "type": "paraphrase",
+    "question": "How does Python interpret a chained comparison such as 10 < x <= 20?",
+    "expected_answer": "As 10 < x and x <= 20, evaluated from left to right.",
+    "gold_source_id": "openstax-intro-python",
+    "gold_page": [109],
+    "evidence_quote": "When comparison operators are chained, the expression is converted into the equivalent combination of comparisons and evaluated from left to right. Ex. 10 < x <= 20 is evaluated as 10 < x and x <= 20.",
+    "filter": null
+  },
+  {
+    "id": "q07",
+    "split": "dev",
+    "type": "direct",
+    "question": "What is elif short for, and when is its condition checked?",
+    "expected_answer": "Else if; its condition is checked when the prior decision statement's condition is false.",
+    "gold_source_id": "openstax-intro-python",
+    "gold_page": [111],
+    "evidence_quote": "An elif (short for else if) statement checks a condition when the prior decision statement's condition is false.",
+    "filter": null
+  },
+  {
+    "id": "q08",
+    "split": "dev",
+    "type": "paraphrase",
+    "question": "What can go wrong if I use two independent if statements instead of an if/elif chain?",
+    "expected_answer": "Separate if statements do not guarantee that only one branch is taken; both branches might run.",
+    "gold_source_id": "openstax-intro-python",
+    "gold_page": [111],
+    "evidence_quote": "Two separate if statements do not guarantee that only one branch is taken and might result in both branches being taken.",
+    "filter": null
+  },
+  {
+    "id": "q09",
+    "split": "dev",
+    "type": "filter",
+    "question": "In the Decisions chapter, where do conditional expressions rank in precedence compared with other Python operations?",
+    "expected_answer": "They have the lowest precedence of all Python operations.",
+    "gold_source_id": "openstax-intro-python",
+    "gold_page": [119],
+    "evidence_quote": "Note: Conditional expressions have the lowest precedence of all Python operations.",
+    "filter": {"chapter": "Decisions"}
+  },
+  {
+    "id": "q10",
+    "split": "dev",
+    "type": "filter",
+    "question": "In the Loops chapter, what is the term for how much a counter changes on each iteration?",
+    "expected_answer": "The step size.",
+    "gold_source_id": "openstax-intro-python",
+    "gold_page": [127],
+    "evidence_quote": "The change in the counter's value in each iteration is called the step size.",
+    "filter": {"chapter": "Loops"}
+  },
+  {
+    "id": "q11",
+    "split": "dev",
+    "type": "condition",
+    "question": "Does the sequence produced by range() include its start value and its end value?",
+    "expected_answer": "It includes the start but excludes the end.",
+    "gold_source_id": "openstax-intro-python",
+    "gold_page": [130],
+    "evidence_quote": "This integer sequence is inclusive of the start and exclusive of the end of the sequence.",
+    "filter": null
+  },
+  {
+    "id": "q12",
+    "split": "dev",
+    "type": "paraphrase",
+    "question": "What is a loop called when nothing in it ever makes it stop on its own?",
+    "expected_answer": "An infinite loop.",
+    "gold_source_id": "openstax-intro-python",
+    "gold_page": [138],
+    "evidence_quote": "A loop without a termination condition is known as an infinite loop.",
+    "filter": null
+  },
+  {
+    "id": "q13",
+    "split": "dev",
+    "type": "direct",
+    "question": "What does a continue statement do inside a loop?",
+    "expected_answer": "It skips the rest of the current iteration without exiting the loop entirely.",
+    "gold_source_id": "openstax-intro-python",
+    "gold_page": [139, 143],
+    "evidence_quote": "A continue statement allows for skipping the execution of the remainder of the loop without exiting the loop entirely.",
+    "filter": null
+  },
+  {
+    "id": "q14",
+    "split": "dev",
+    "type": "condition",
+    "question": "Under what condition does the else block attached to a for or while loop run?",
+    "expected_answer": "It runs after the loop finishes without being interrupted by a break statement.",
+    "gold_source_id": "openstax-intro-python",
+    "gold_page": [143],
+    "evidence_quote": "A loop else statement runs after the loop's execution is completed without being interrupted by a break statement.",
+    "filter": null,
+    "notes": "The same sentence in section 5.5 is split across PDF pages 140-141, so only the chapter summary on page 143 contains the full quote on one page."
+  },
+  {
+    "id": "q15",
+    "split": "dev",
+    "type": "filter",
+    "question": "In the Functions chapter, which keyword is used to define a function?",
+    "expected_answer": "def",
+    "gold_source_id": "openstax-intro-python",
+    "gold_page": [148],
+    "evidence_quote": "A function is defined using the def keyword.",
+    "filter": {"chapter": "Functions"}
+  },
+  {
+    "id": "q16",
+    "split": "test",
+    "type": "condition",
+    "question": "Can a variable created inside a function still be used after that function has finished executing?",
+    "expected_answer": "No. A local variable only exists within the function and no longer exists after the function finishes.",
+    "gold_source_id": "openstax-intro-python",
+    "gold_page": [156],
+    "evidence_quote": "A local variable cannot be accessed outside of the function in which the variable was created. After a function finishes executing, the function's local variables no longer exist.",
+    "filter": null
+  },
+  {
+    "id": "q17",
+    "split": "test",
+    "type": "paraphrase",
+    "question": "How do I change the value of a variable defined at the top level of my program from inside a function?",
+    "expected_answer": "Declare the variable with the global keyword inside the function.",
+    "gold_source_id": "openstax-intro-python",
+    "gold_page": [157],
+    "evidence_quote": "To edit a global variable inside a function, the variable must be declared with the global keyword.",
+    "filter": null
+  },
+  {
+    "id": "q18",
+    "split": "test",
+    "type": "direct",
+    "question": "What does a function return if it has no return statement?",
+    "expected_answer": "None, representing no value.",
+    "gold_source_id": "openstax-intro-python",
+    "gold_page": [165],
+    "evidence_quote": "Functions introduced so far have not had a return statement, which is the same as returning None, representing no value.",
+    "filter": null
+  },
+  {
+    "id": "q19",
+    "split": "test",
+    "type": "condition",
+    "question": "When a function call mixes positional and keyword arguments, in what order must they appear?",
+    "expected_answer": "Positional arguments must come first, in the correct order, before any keyword arguments.",
+    "gold_source_id": "openstax-intro-python",
+    "gold_page": [169],
+    "evidence_quote": "When mixing positional and keyword arguments, positional arguments must come first in the correct order, before any keyword arguments.",
+    "filter": null
+  },
+  {
+    "id": "q20",
+    "split": "test",
+    "type": "filter",
+    "question": "In the Functions chapter, why should a list not be used as a default parameter value?",
+    "expected_answer": "Default values are defined only once, so mutable objects such as lists should not be used as defaults.",
+    "gold_source_id": "openstax-intro-python",
+    "gold_page": [170],
+    "evidence_quote": "Note: Default parameter values are only defined once to be used by the function, so mutable objects (such as lists) should not be used as default values.",
+    "filter": {"chapter": "Functions"}
+  }
+]

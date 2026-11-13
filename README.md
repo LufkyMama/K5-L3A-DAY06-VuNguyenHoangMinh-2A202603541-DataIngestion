@@ -1,5 +1,36 @@
 # Day 06 · Data Ingestion Engineering
 
+> ## Bài nộp — cách setup và chạy
+>
+> **Corpus:** OpenStax *Introduction to Python Programming*, chương 4–6 (PDF trang 95–174, 77 trang nội dung), CC BY-NC-SA 4.0. File: `data/corpus/Introduction_to_Python_Programming-WEB.pdf`; nguồn, quyền và danh sách trang: `data/manifest.json`.
+> **Stack:** Python 3.13, `pypdf`, OpenAI `text-embedding-3-small` (1536 chiều), PostgreSQL 16 + pgvector 0.8.7 (Docker), exact cosine, top-3.
+>
+> **Setup** (PowerShell, trong `starter/`; cần Docker Desktop và Python 3.11–3.14):
+> ```powershell
+> cd starter
+> py -3.13 -m venv .venv
+> .venv\Scripts\Activate.ps1
+> python -m pip install -r requirements.txt
+> Copy-Item .env.example .env      # rồi điền OPENAI_API_KEY và EMBEDDING_MODEL=text-embedding-3-small
+> docker compose -p day6_student_starter up -d --wait
+> python scripts/check_setup.py    # phải thấy "Setup OK"
+> ```
+>
+> **Chạy** (trong `starter/`):
+> | Lệnh | Việc làm | Kết quả |
+> |---|---|---|
+> | `python scripts/try_normalize.py` | Test `normalize_text` (15 case) | in ra PASS/FAIL |
+> | `python scripts/build_chunks.py` | Đọc PDF, tạo chunk A/B, thống kê, kiểm tra evidence có bị cắt không (không gọi API) | `results/ingest_log.json`, `chunks_A.jsonl`, `chunks_B.jsonl`, `chunk_stats.json` |
+> | `python -m src.run --split dev` | Ingest A/B/C vào pgvector, top-3 cho 15 câu dev | `results/traces_dev.jsonl`, `results/metrics_dev.json` |
+> | `python -m src.run --split test` | Như trên cho 5 câu test (chạy sau khi đã chốt cấu hình) | `results/traces_test.jsonl`, `results/metrics_test.json` |
+> | `python scripts/label_sheets.py summarize` | Tổng hợp nhãn thủ công | `results/manual/summary.json` |
+>
+> Mỗi lần chạy `src.run` tốn khoảng 50k tokens (≈ $0,001). Chạy lại không làm nhân đôi dữ liệu (upsert theo `chunk_id` ổn định).
+>
+> **Vị trí các file nộp:** code `starter/src/` · benchmark `benchmark/questions.json` · cấu hình A/B/C `artifacts/experiment_log.csv` · kết quả và nhãn thủ công `starter/results/` · báo cáo `report/individual/2A202603541_VuNguyenHoangMinh.md` · thông tin học viên `STUDENT.md`.
+
+---
+
 **Lab cá nhân** · **4 giờ** · **Dữ liệu tự chọn**
 
 Biến tài liệu thành kho tri thức có thể truy xuất cho AI agent, rồi đo xem cách chuẩn bị dữ liệu nào hiệu quả nhất.

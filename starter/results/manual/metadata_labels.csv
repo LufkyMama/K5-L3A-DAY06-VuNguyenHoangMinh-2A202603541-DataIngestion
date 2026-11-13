@@ -1,0 +1,255 @@
+﻿question_id,strategy,rank,chunk_id,stored_document_id,stored_source,stored_page,stored_chapter,chunk_text,source_ok,page_ok,chapter_ok,note
+q16,A,1,openstax-intro-python:p162:fixed500o50:001,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,162,Functions,"variable is a name that refers to an object stored in memory, aka an object reference, so Python
+uses a pass-by-object-reference system. If an argument is changed in a function, the changes are kept or lost
+depending on the object's mutability. A mutable object can be modified after creation. A function's changes to
+the object then appear outside the function. An immutable object cannot be modified after creation. So a
+function must make a local copy to modify, and the local copy's changes don'",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q16,A,2,openstax-intro-python:p156:fixed500o50:001,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,156,Functions,"executing, the
+function's local variables no longer exist.
+CHECKPOINT
+Global and local variables in a program with a function
+Global and local variables in a program with a function; ch 6, video 7 (https://www.openstax.org/r/global-
+and-local-variables)
+CONCEPTS IN PRACTICE
+Local variables
+4 . Which variables are local?
+def print_time():
+out_str = ""Time is "" + str(hour) + "":"" + str(min)
+print(out_str)
+hour = int(input())
+min = int(input())
+print_time()
+a. hour and min
+b. out_str
+c. hour, min, a",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q16,A,3,openstax-intro-python:p155:fixed500o50:000,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,155,Functions,"6.3 Variable scope
+Learning objectives
+By the end of this section you should be able to
+• Identify the scope of a program's variables.
+• Discuss the impact of a variable's scope.
+Global scope
+A variable's scope is the part of a program where the variable can be accessed. A variable created outside of a
+function has global scope and can be accessed anywhere in the program. A Python program begins in global
+scope, and the global scope lasts for the entire program execution.
+CHECKPOINT
+Global varia",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q16,B,1,openstax-intro-python:p156:para500:001,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,156,Functions,"Local scope
+A variable created within a function has local scope and only exists within the function. A local variable cannot
+be accessed outside of the function in which the variable was created. After a function finishes executing, the
+function's local variables no longer exist.",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q16,B,2,openstax-intro-python:p157:para500:002,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,157,Functions,"A function treats a variable edited within the function as a local variable unless told otherwise. To edit
+a global variable inside a function, the variable must be declared with the global keyword.",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q16,B,3,openstax-intro-python:p155:para500:001,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,155,Functions,"Global scope
+A variable's scope is the part of a program where the variable can be accessed. A variable created outside of a
+function has global scope and can be accessed anywhere in the program. A Python program begins in global
+scope, and the global scope lasts for the entire program execution.",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q16,C,1,openstax-intro-python:p156:para500:001,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,156,Functions,"Local scope
+A variable created within a function has local scope and only exists within the function. A local variable cannot
+be accessed outside of the function in which the variable was created. After a function finishes executing, the
+function's local variables no longer exist.",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q16,C,2,openstax-intro-python:p157:para500:002,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,157,Functions,"A function treats a variable edited within the function as a local variable unless told otherwise. To edit
+a global variable inside a function, the variable must be declared with the global keyword.",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q16,C,3,openstax-intro-python:p155:para500:001,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,155,Functions,"Global scope
+A variable's scope is the part of a program where the variable can be accessed. A variable created outside of a
+function has global scope and can be accessed anywhere in the program. A Python program begins in global
+scope, and the global scope lasts for the entire program execution.",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q17,A,1,openstax-intro-python:p157:fixed500o50:002,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,157,Functions,"Editing global variables in a program with a function; ch 6, video 8 (https://www.openstax.org/r/editing-
+global-variables)
+6.3 • Variable scope 147",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q17,A,2,openstax-intro-python:p155:fixed500o50:000,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,155,Functions,"6.3 Variable scope
+Learning objectives
+By the end of this section you should be able to
+• Identify the scope of a program's variables.
+• Discuss the impact of a variable's scope.
+Global scope
+A variable's scope is the part of a program where the variable can be accessed. A variable created outside of a
+function has global scope and can be accessed anywhere in the program. A Python program begins in global
+scope, and the global scope lasts for the entire program execution.
+CHECKPOINT
+Global varia",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q17,A,3,openstax-intro-python:p162:fixed500o50:001,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,162,Functions,"variable is a name that refers to an object stored in memory, aka an object reference, so Python
+uses a pass-by-object-reference system. If an argument is changed in a function, the changes are kept or lost
+depending on the object's mutability. A mutable object can be modified after creation. A function's changes to
+the object then appear outside the function. An immutable object cannot be modified after creation. So a
+function must make a local copy to modify, and the local copy's changes don'",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q17,B,1,openstax-intro-python:p157:para500:002,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,157,Functions,"A function treats a variable edited within the function as a local variable unless told otherwise. To edit
+a global variable inside a function, the variable must be declared with the global keyword.",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q17,B,2,openstax-intro-python:p157:para500:003,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,157,Functions,"CHECKPOINT
+Editing global variables in a program with a function
+Editing global variables in a program with a function; ch 6, video 8 (https://www.openstax.org/r/editing-
+global-variables)
+6.3 • Variable scope 147",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q17,B,3,openstax-intro-python:p155:para500:002,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,155,Functions,"CHECKPOINT
+Global variables in a program with a function
+Global variables in a program with a function; ch 6, video 6 (https://www.openstax.org/r/global-variables)",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q17,C,1,openstax-intro-python:p157:para500:002,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,157,Functions,"A function treats a variable edited within the function as a local variable unless told otherwise. To edit
+a global variable inside a function, the variable must be declared with the global keyword.",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q17,C,2,openstax-intro-python:p157:para500:003,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,157,Functions,"CHECKPOINT
+Editing global variables in a program with a function
+Editing global variables in a program with a function; ch 6, video 8 (https://www.openstax.org/r/editing-
+global-variables)
+6.3 • Variable scope 147",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q17,C,3,openstax-intro-python:p155:para500:002,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,155,Functions,"CHECKPOINT
+Global variables in a program with a function
+Global variables in a program with a function; ch 6, video 6 (https://www.openstax.org/r/global-variables)",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q18,A,1,openstax-intro-python:p164:fixed500o50:002,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,164,Functions,"dentify a function's return value.
+• Employ return statements in functions to return values.
+Returning from a function
+When a function finishes, the function returns and provides a result to the calling code. A return statement
+TRY IT
+154 6 • Functions
+Access for free at openstax.org",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q18,A,2,openstax-intro-python:p165:fixed500o50:002,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,165,Functions,"sing multiple return statements
+Functions that have multiple execution paths may use multiple return statements. Ex: A function with an
+if-else statement may have two return statements for each branch. Return statements always end the
+6.5 • Return values 155",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q18,A,3,openstax-intro-python:p165:fixed500o50:000,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,165,Functions,"finishes the function execution and can specify a value to return to the function's caller. Functions introduced
+so far have not had a return statement, which is the same as returning None, representing no value.
+CHECKPOINT
+Returning a value from a function
+Returning a value from a function; ch 6, video 11 (https://www.openstax.org/r/returning-value-from-
+function)
+CONCEPTS IN PRACTICE
+Using return statements
+1 . What is returned by calc_mpg(miles, gallons)?
+def calc_mpg(miles, gallons):
+mpg = m",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q18,B,1,openstax-intro-python:p165:para500:000,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,165,Functions,"finishes the function execution and can specify a value to return to the function's caller. Functions introduced
+so far have not had a return statement, which is the same as returning None, representing no value.",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q18,B,2,openstax-intro-python:p164:para500:004,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,164,Functions,"Returning from a function
+When a function finishes, the function returns and provides a result to the calling code. A return statement",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q18,B,3,openstax-intro-python:p165:para500:004,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,165,Functions,"Using multiple return statements
+Functions that have multiple execution paths may use multiple return statements. Ex: A function with an
+if-else statement may have two return statements for each branch. Return statements always end the
+6.5 • Return values 155",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q18,C,1,openstax-intro-python:p165:para500:000,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,165,Functions,"finishes the function execution and can specify a value to return to the function's caller. Functions introduced
+so far have not had a return statement, which is the same as returning None, representing no value.",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q18,C,2,openstax-intro-python:p164:para500:004,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,164,Functions,"Returning from a function
+When a function finishes, the function returns and provides a result to the calling code. A return statement",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q18,C,3,openstax-intro-python:p165:para500:004,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,165,Functions,"Using multiple return statements
+Functions that have multiple execution paths may use multiple return statements. Ex: A function with an
+if-else statement may have two return statements for each branch. Return statements always end the
+6.5 • Return values 155",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q19,A,1,openstax-intro-python:p169:fixed500o50:001,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,169,Functions,"that use parameter names
+to assign values rather than order. When mixing positional and keyword arguments, positional arguments
+must come first in the correct order, before any keyword arguments.
+CHECKPOINT
+Using keyword arguments
+Using keyword arguments; ch 6, video 13 (https://www.openstax.org/r/keyword-arguments)
+CONCEPTS IN PRACTICE
+Using keyword and positional arguments
+Consider the following function:
+def greeting(msg, name, count):
+i = 0
+for i in range(0, count):
+print(msg, name)
+1 . Whi",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q19,A,2,openstax-intro-python:p171:fixed500o50:003,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,171,Functions,"the arguments' values.
+• Function calls can use positional arguments to map values to parameters in order.
+• Function calls can use keyword arguments to map values using parameter names in any order.
+• Functions can define default parameter values to allow for optional arguments in function calls.
+• Python uses a pass-by-object-reference system to assign parameters with the object values referenced by
+the arguments.
+• Functions can use return statements to return values back to the calling code",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q19,A,3,openstax-intro-python:p169:fixed500o50:000,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,169,Functions,"6.6 Keyword arguments
+Learning objectives
+By the end of this section you should be able to
+• Describe the difference between positional and keyword arguments.
+• Create functions that use positional and keyword arguments and default parameter values.
+Keyword arguments
+So far, functions have been called using positional arguments, which are arguments that are assigned to
+parameters in order. Python also allows keyword arguments, which are arguments that use parameter names
+to assign values rather",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q19,B,1,openstax-intro-python:p169:para500:001,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,169,Functions,"Keyword arguments
+So far, functions have been called using positional arguments, which are arguments that are assigned to
+parameters in order. Python also allows keyword arguments, which are arguments that use parameter names
+to assign values rather than order. When mixing positional and keyword arguments, positional arguments
+must come first in the correct order, before any keyword arguments.",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q19,B,2,openstax-intro-python:p161:para500:001,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,161,Functions,"Multiple arguments and parameters
+Functions can have multiple parameters. Ex: A function uses two parameters, length and width, to compute
+the square footage of a room. Function calls must use the correct order and number of arguments to avoid
+undesired behavior and errors (unless using optional or keyword arguments as discussed later).",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q19,B,3,openstax-intro-python:p169:para500:000,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,169,Functions,"6.6 Keyword arguments
+Learning objectives
+By the end of this section you should be able to
+• Describe the difference between positional and keyword arguments.
+• Create functions that use positional and keyword arguments and default parameter values.",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q19,C,1,openstax-intro-python:p169:para500:001,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,169,Functions,"Keyword arguments
+So far, functions have been called using positional arguments, which are arguments that are assigned to
+parameters in order. Python also allows keyword arguments, which are arguments that use parameter names
+to assign values rather than order. When mixing positional and keyword arguments, positional arguments
+must come first in the correct order, before any keyword arguments.",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q19,C,2,openstax-intro-python:p161:para500:001,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,161,Functions,"Multiple arguments and parameters
+Functions can have multiple parameters. Ex: A function uses two parameters, length and width, to compute
+the square footage of a room. Function calls must use the correct order and number of arguments to avoid
+undesired behavior and errors (unless using optional or keyword arguments as discussed later).",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q19,C,3,openstax-intro-python:p169:para500:000,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,169,Functions,"6.6 Keyword arguments
+Learning objectives
+By the end of this section you should be able to
+• Describe the difference between positional and keyword arguments.
+• Create functions that use positional and keyword arguments and default parameter values.",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q20,A,1,openstax-intro-python:p160:fixed500o50:001,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,160,Functions,"a programmer wants to write a function that prints the contents of a list? Good practice is to pass
+values directly to a function rather than relying on global variables. A function argument is a value passed as
+input during a function call. A function parameter is a variable representing the input in the function
+definition. Note: The terms ""argument"" and ""parameter"" are sometimes used interchangeably in conversation
+and documentation.
+CHECKPOINT
+Global and local variables in a program with a f",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q20,A,2,openstax-intro-python:p170:fixed500o50:001,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,170,Functions,"(such as
+lists) should not be used as default values.
+The physics example below calculates weight as a force in newtons given mass in kilograms and acceleration
+in . Gravity on Earth is 9.8 , and gravity on Mars is 3.7 .
+CHECKPOINT
+Using default parameter values
+Using default parameter values; ch 6, video 14 (https://www.openstax.org/r/default-parameter-values)
+CONCEPTS IN PRACTICE
+Using default parameter values
+Consider the following updated version of greeting():
+def greeting(msg, name=""Frien",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q20,A,3,openstax-intro-python:p173:fixed500o50:000,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,173,Functions,"Construct Description
+Keyword arguments
+def function_name(parameter_1, parameter_2):
+# Function body
+function_name(parameter_2 = 5, parameter_1 = 2)
+Default parameter value def function_name(parameter_1 = 100):
+# Function body
+Table 6.2 Chapter 6 reference.
+6.7 • Chapter summary 163",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q20,B,1,openstax-intro-python:p160:para500:002,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,160,Functions,"Arguments and parameters
+What if a programmer wants to write a function that prints the contents of a list? Good practice is to pass
+values directly to a function rather than relying on global variables. A function argument is a value passed as
+input during a function call. A function parameter is a variable representing the input in the function
+definition. Note: The terms ""argument"" and ""parameter"" are sometimes used interchangeably in conversation
+and documentation.",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q20,B,2,openstax-intro-python:p170:para500:002,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,170,Functions,"CHECKPOINT
+Using default parameter values
+Using default parameter values; ch 6, video 14 (https://www.openstax.org/r/default-parameter-values)",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q20,B,3,openstax-intro-python:p147:para500:001,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,147,Functions,"6.3 Variable scope
+6.4 Parameters
+6.5 Return values
+6.6 Keyword arguments
+6.7 Chapter summary
+Introduction
+Functions are the next step toward creating optimized code as a software developer. If the same block of code
+is reused repeatedly, a function allows the programmer to write the block of code once, name the block, and
+use the code as many times as needed by calling the block by name. Functions can read in values and return
+values to perform tasks, including complex calculations.",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q20,C,1,openstax-intro-python:p160:para500:002,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,160,Functions,"Arguments and parameters
+What if a programmer wants to write a function that prints the contents of a list? Good practice is to pass
+values directly to a function rather than relying on global variables. A function argument is a value passed as
+input during a function call. A function parameter is a variable representing the input in the function
+definition. Note: The terms ""argument"" and ""parameter"" are sometimes used interchangeably in conversation
+and documentation.",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q20,C,2,openstax-intro-python:p170:para500:002,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,170,Functions,"CHECKPOINT
+Using default parameter values
+Using default parameter values; ch 6, video 14 (https://www.openstax.org/r/default-parameter-values)",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."
+q20,C,3,openstax-intro-python:p147:para500:001,openstax-intro-python,data/corpus/Introduction_to_Python_Programming-WEB.pdf,147,Functions,"6.3 Variable scope
+6.4 Parameters
+6.5 Return values
+6.6 Keyword arguments
+6.7 Chapter summary
+Introduction
+Functions are the next step toward creating optimized code as a software developer. If the same block of code
+is reused repeatedly, a function allows the programmer to write the block of code once, name the block, and
+use the code as many times as needed by calling the block by name. Functions can read in values and return
+values to perform tasks, including complex calculations.",Y,Y,Y,"Page: chunk text found on that PDF page (raw pypdf text, whitespace ignored). Chapter: matches running header/footer printed on the page."

@@ -1,0 +1,285 @@
+﻿question_id,strategy,question,expected_answer,evidence_quote,gold_page,filter_applied,auto_hit_at_3,top3_text,score,reason
+q16,A,Can a variable created inside a function still be used after that function has finished executing?,No. A local variable only exists within the function and no longer exists after the function finishes.,"A local variable cannot be accessed outside of the function in which the variable was created. After a function finishes executing, the function's local variables no longer exist.",[156],,False,"[#1 p162] variable is a name that refers to an object stored in memory, aka an object reference, so Python
+uses a pass-by-object-reference system. If an argument is changed in a function, the changes are kept or lost
+depending on the object's mutability. A mutable object can be modified after creation. A function's changes to
+the object then appear outside the function. An immutable object cannot be modified after creation. So a
+function must make a local copy to modify, and the local copy's changes don'
+
+[#2 p156] executing, the
+function's local variables no longer exist.
+CHECKPOINT
+Global and local variables in a program with a function
+Global and local variables in a program with a function; ch 6, video 7 (https://www.openstax.org/r/global-
+and-local-variables)
+CONCEPTS IN PRACTICE
+Local variables
+4 . Which variables are local?
+def print_time():
+out_str = ""Time is "" + str(hour) + "":"" + str(min)
+print(out_str)
+hour = int(input())
+min = int(input())
+print_time()
+a. hour and min
+b. out_str
+c. hour, min, a
+
+[#3 p155] 6.3 Variable scope
+Learning objectives
+By the end of this section you should be able to
+• Identify the scope of a program's variables.
+• Discuss the impact of a variable's scope.
+Global scope
+A variable's scope is the part of a program where the variable can be accessed. A variable created outside of a
+function has global scope and can be accessed anywhere in the program. A Python program begins in global
+scope, and the global scope lasts for the entire program execution.
+CHECKPOINT
+Global varia",1,"#2 has '...executing, the function's local variables no longer exist.' but the start of the sentence (after a function finishes) is cut off; condition only implied."
+q16,B,Can a variable created inside a function still be used after that function has finished executing?,No. A local variable only exists within the function and no longer exists after the function finishes.,"A local variable cannot be accessed outside of the function in which the variable was created. After a function finishes executing, the function's local variables no longer exist.",[156],,True,"[#1 p156] Local scope
+A variable created within a function has local scope and only exists within the function. A local variable cannot
+be accessed outside of the function in which the variable was created. After a function finishes executing, the
+function's local variables no longer exist.
+
+[#2 p157] A function treats a variable edited within the function as a local variable unless told otherwise. To edit
+a global variable inside a function, the variable must be declared with the global keyword.
+
+[#3 p155] Global scope
+A variable's scope is the part of a program where the variable can be accessed. A variable created outside of a
+function has global scope and can be accessed anywhere in the program. A Python program begins in global
+scope, and the global scope lasts for the entire program execution.",2,#1 'Local scope' chunk states local variables cannot be accessed outside the function and no longer exist after it finishes.
+q16,C,Can a variable created inside a function still be used after that function has finished executing?,No. A local variable only exists within the function and no longer exists after the function finishes.,"A local variable cannot be accessed outside of the function in which the variable was created. After a function finishes executing, the function's local variables no longer exist.",[156],,True,"[#1 p156] Local scope
+A variable created within a function has local scope and only exists within the function. A local variable cannot
+be accessed outside of the function in which the variable was created. After a function finishes executing, the
+function's local variables no longer exist.
+
+[#2 p157] A function treats a variable edited within the function as a local variable unless told otherwise. To edit
+a global variable inside a function, the variable must be declared with the global keyword.
+
+[#3 p155] Global scope
+A variable's scope is the part of a program where the variable can be accessed. A variable created outside of a
+function has global scope and can be accessed anywhere in the program. A Python program begins in global
+scope, and the global scope lasts for the entire program execution.",2,Same top-3 as B; #1 fully answers.
+q17,A,How do I change the value of a variable defined at the top level of my program from inside a function?,Declare the variable with the global keyword inside the function.,"To edit a global variable inside a function, the variable must be declared with the global keyword.",[157],,False,"[#1 p157] Editing global variables in a program with a function; ch 6, video 8 (https://www.openstax.org/r/editing-
+global-variables)
+6.3 • Variable scope 147
+
+[#2 p155] 6.3 Variable scope
+Learning objectives
+By the end of this section you should be able to
+• Identify the scope of a program's variables.
+• Discuss the impact of a variable's scope.
+Global scope
+A variable's scope is the part of a program where the variable can be accessed. A variable created outside of a
+function has global scope and can be accessed anywhere in the program. A Python program begins in global
+scope, and the global scope lasts for the entire program execution.
+CHECKPOINT
+Global varia
+
+[#3 p162] variable is a name that refers to an object stored in memory, aka an object reference, so Python
+uses a pass-by-object-reference system. If an argument is changed in a function, the changes are kept or lost
+depending on the object's mutability. A mutable object can be modified after creation. A function's changes to
+the object then appear outside the function. An immutable object cannot be modified after creation. So a
+function must make a local copy to modify, and the local copy's changes don'",0,#1 is only a video link title; #2 global scope definition; #3 mutability. None mentions the global keyword.
+q17,B,How do I change the value of a variable defined at the top level of my program from inside a function?,Declare the variable with the global keyword inside the function.,"To edit a global variable inside a function, the variable must be declared with the global keyword.",[157],,True,"[#1 p157] A function treats a variable edited within the function as a local variable unless told otherwise. To edit
+a global variable inside a function, the variable must be declared with the global keyword.
+
+[#2 p157] CHECKPOINT
+Editing global variables in a program with a function
+Editing global variables in a program with a function; ch 6, video 8 (https://www.openstax.org/r/editing-
+global-variables)
+6.3 • Variable scope 147
+
+[#3 p155] CHECKPOINT
+Global variables in a program with a function
+Global variables in a program with a function; ch 6, video 6 (https://www.openstax.org/r/global-variables)",2,#1 states a variable edited in a function is local unless declared with the global keyword.
+q17,C,How do I change the value of a variable defined at the top level of my program from inside a function?,Declare the variable with the global keyword inside the function.,"To edit a global variable inside a function, the variable must be declared with the global keyword.",[157],,True,"[#1 p157] A function treats a variable edited within the function as a local variable unless told otherwise. To edit
+a global variable inside a function, the variable must be declared with the global keyword.
+
+[#2 p157] CHECKPOINT
+Editing global variables in a program with a function
+Editing global variables in a program with a function; ch 6, video 8 (https://www.openstax.org/r/editing-
+global-variables)
+6.3 • Variable scope 147
+
+[#3 p155] CHECKPOINT
+Global variables in a program with a function
+Global variables in a program with a function; ch 6, video 6 (https://www.openstax.org/r/global-variables)",2,Same top-3 as B; #1 fully answers.
+q18,A,What does a function return if it has no return statement?,"None, representing no value.","Functions introduced so far have not had a return statement, which is the same as returning None, representing no value.",[165],,True,"[#1 p164] dentify a function's return value.
+• Employ return statements in functions to return values.
+Returning from a function
+When a function finishes, the function returns and provides a result to the calling code. A return statement
+TRY IT
+154 6 • Functions
+Access for free at openstax.org
+
+[#2 p165] sing multiple return statements
+Functions that have multiple execution paths may use multiple return statements. Ex: A function with an
+if-else statement may have two return statements for each branch. Return statements always end the
+6.5 • Return values 155
+
+[#3 p165] finishes the function execution and can specify a value to return to the function's caller. Functions introduced
+so far have not had a return statement, which is the same as returning None, representing no value.
+CHECKPOINT
+Returning a value from a function
+Returning a value from a function; ch 6, video 11 (https://www.openstax.org/r/returning-value-from-
+function)
+CONCEPTS IN PRACTICE
+Using return statements
+1 . What is returned by calc_mpg(miles, gallons)?
+def calc_mpg(miles, gallons):
+mpg = m",2,"#3 contains 'not had a return statement, which is the same as returning None'."
+q18,B,What does a function return if it has no return statement?,"None, representing no value.","Functions introduced so far have not had a return statement, which is the same as returning None, representing no value.",[165],,True,"[#1 p165] finishes the function execution and can specify a value to return to the function's caller. Functions introduced
+so far have not had a return statement, which is the same as returning None, representing no value.
+
+[#2 p164] Returning from a function
+When a function finishes, the function returns and provides a result to the calling code. A return statement
+
+[#3 p165] Using multiple return statements
+Functions that have multiple execution paths may use multiple return statements. Ex: A function with an
+if-else statement may have two return statements for each branch. Return statements always end the
+6.5 • Return values 155",2,#1 contains the full sentence about returning None.
+q18,C,What does a function return if it has no return statement?,"None, representing no value.","Functions introduced so far have not had a return statement, which is the same as returning None, representing no value.",[165],,True,"[#1 p165] finishes the function execution and can specify a value to return to the function's caller. Functions introduced
+so far have not had a return statement, which is the same as returning None, representing no value.
+
+[#2 p164] Returning from a function
+When a function finishes, the function returns and provides a result to the calling code. A return statement
+
+[#3 p165] Using multiple return statements
+Functions that have multiple execution paths may use multiple return statements. Ex: A function with an
+if-else statement may have two return statements for each branch. Return statements always end the
+6.5 • Return values 155",2,Same top-3 as B.
+q19,A,"When a function call mixes positional and keyword arguments, in what order must they appear?","Positional arguments must come first, in the correct order, before any keyword arguments.","When mixing positional and keyword arguments, positional arguments must come first in the correct order, before any keyword arguments.",[169],,True,"[#1 p169] that use parameter names
+to assign values rather than order. When mixing positional and keyword arguments, positional arguments
+must come first in the correct order, before any keyword arguments.
+CHECKPOINT
+Using keyword arguments
+Using keyword arguments; ch 6, video 13 (https://www.openstax.org/r/keyword-arguments)
+CONCEPTS IN PRACTICE
+Using keyword and positional arguments
+Consider the following function:
+def greeting(msg, name, count):
+i = 0
+for i in range(0, count):
+print(msg, name)
+1 . Whi
+
+[#2 p171] the arguments' values.
+• Function calls can use positional arguments to map values to parameters in order.
+• Function calls can use keyword arguments to map values using parameter names in any order.
+• Functions can define default parameter values to allow for optional arguments in function calls.
+• Python uses a pass-by-object-reference system to assign parameters with the object values referenced by
+the arguments.
+• Functions can use return statements to return values back to the calling code
+
+[#3 p169] 6.6 Keyword arguments
+Learning objectives
+By the end of this section you should be able to
+• Describe the difference between positional and keyword arguments.
+• Create functions that use positional and keyword arguments and default parameter values.
+Keyword arguments
+So far, functions have been called using positional arguments, which are arguments that are assigned to
+parameters in order. Python also allows keyword arguments, which are arguments that use parameter names
+to assign values rather",2,"#1 contains the full rule: positional arguments first, before any keyword arguments."
+q19,B,"When a function call mixes positional and keyword arguments, in what order must they appear?","Positional arguments must come first, in the correct order, before any keyword arguments.","When mixing positional and keyword arguments, positional arguments must come first in the correct order, before any keyword arguments.",[169],,True,"[#1 p169] Keyword arguments
+So far, functions have been called using positional arguments, which are arguments that are assigned to
+parameters in order. Python also allows keyword arguments, which are arguments that use parameter names
+to assign values rather than order. When mixing positional and keyword arguments, positional arguments
+must come first in the correct order, before any keyword arguments.
+
+[#2 p161] Multiple arguments and parameters
+Functions can have multiple parameters. Ex: A function uses two parameters, length and width, to compute
+the square footage of a room. Function calls must use the correct order and number of arguments to avoid
+undesired behavior and errors (unless using optional or keyword arguments as discussed later).
+
+[#3 p169] 6.6 Keyword arguments
+Learning objectives
+By the end of this section you should be able to
+• Describe the difference between positional and keyword arguments.
+• Create functions that use positional and keyword arguments and default parameter values.",2,#1 'Keyword arguments' chunk contains the full rule.
+q19,C,"When a function call mixes positional and keyword arguments, in what order must they appear?","Positional arguments must come first, in the correct order, before any keyword arguments.","When mixing positional and keyword arguments, positional arguments must come first in the correct order, before any keyword arguments.",[169],,True,"[#1 p169] Keyword arguments
+So far, functions have been called using positional arguments, which are arguments that are assigned to
+parameters in order. Python also allows keyword arguments, which are arguments that use parameter names
+to assign values rather than order. When mixing positional and keyword arguments, positional arguments
+must come first in the correct order, before any keyword arguments.
+
+[#2 p161] Multiple arguments and parameters
+Functions can have multiple parameters. Ex: A function uses two parameters, length and width, to compute
+the square footage of a room. Function calls must use the correct order and number of arguments to avoid
+undesired behavior and errors (unless using optional or keyword arguments as discussed later).
+
+[#3 p169] 6.6 Keyword arguments
+Learning objectives
+By the end of this section you should be able to
+• Describe the difference between positional and keyword arguments.
+• Create functions that use positional and keyword arguments and default parameter values.",2,Same top-3 as B.
+q20,A,"In the Functions chapter, why should a list not be used as a default parameter value?","Default values are defined only once, so mutable objects such as lists should not be used as defaults.","Note: Default parameter values are only defined once to be used by the function, so mutable objects (such as lists) should not be used as default values.",[170],,False,"[#1 p160] a programmer wants to write a function that prints the contents of a list? Good practice is to pass
+values directly to a function rather than relying on global variables. A function argument is a value passed as
+input during a function call. A function parameter is a variable representing the input in the function
+definition. Note: The terms ""argument"" and ""parameter"" are sometimes used interchangeably in conversation
+and documentation.
+CHECKPOINT
+Global and local variables in a program with a f
+
+[#2 p170] (such as
+lists) should not be used as default values.
+The physics example below calculates weight as a force in newtons given mass in kilograms and acceleration
+in . Gravity on Earth is 9.8 , and gravity on Mars is 3.7 .
+CHECKPOINT
+Using default parameter values
+Using default parameter values; ch 6, video 14 (https://www.openstax.org/r/default-parameter-values)
+CONCEPTS IN PRACTICE
+Using default parameter values
+Consider the following updated version of greeting():
+def greeting(msg, name=""Frien
+
+[#3 p173] Construct Description
+Keyword arguments
+def function_name(parameter_1, parameter_2):
+# Function body
+function_name(parameter_2 = 5, parameter_1 = 2)
+Default parameter value def function_name(parameter_1 = 100):
+# Function body
+Table 6.2 Chapter 6 reference.
+6.7 • Chapter summary 163",1,#2 starts '(such as lists) should not be used as default values' - gives the rule but the reason (defaults are defined only once) is cut off.
+q20,B,"In the Functions chapter, why should a list not be used as a default parameter value?","Default values are defined only once, so mutable objects such as lists should not be used as defaults.","Note: Default parameter values are only defined once to be used by the function, so mutable objects (such as lists) should not be used as default values.",[170],,False,"[#1 p160] Arguments and parameters
+What if a programmer wants to write a function that prints the contents of a list? Good practice is to pass
+values directly to a function rather than relying on global variables. A function argument is a value passed as
+input during a function call. A function parameter is a variable representing the input in the function
+definition. Note: The terms ""argument"" and ""parameter"" are sometimes used interchangeably in conversation
+and documentation.
+
+[#2 p170] CHECKPOINT
+Using default parameter values
+Using default parameter values; ch 6, video 14 (https://www.openstax.org/r/default-parameter-values)
+
+[#3 p147] 6.3 Variable scope
+6.4 Parameters
+6.5 Return values
+6.6 Keyword arguments
+6.7 Chapter summary
+Introduction
+Functions are the next step toward creating optimized code as a software developer. If the same block of code
+is reused repeatedly, a function allows the programmer to write the block of code once, name the block, and
+use the code as many times as needed by calling the block by name. Functions can read in values and return
+values to perform tasks, including complex calculations.",0,#2 from gold page 170 is only a checkpoint/video title; no chunk states the rule or the reason.
+q20,C,"In the Functions chapter, why should a list not be used as a default parameter value?","Default values are defined only once, so mutable objects such as lists should not be used as defaults.","Note: Default parameter values are only defined once to be used by the function, so mutable objects (such as lists) should not be used as default values.",[170],{'chapter': 'Functions'},False,"[#1 p160] Arguments and parameters
+What if a programmer wants to write a function that prints the contents of a list? Good practice is to pass
+values directly to a function rather than relying on global variables. A function argument is a value passed as
+input during a function call. A function parameter is a variable representing the input in the function
+definition. Note: The terms ""argument"" and ""parameter"" are sometimes used interchangeably in conversation
+and documentation.
+
+[#2 p170] CHECKPOINT
+Using default parameter values
+Using default parameter values; ch 6, video 14 (https://www.openstax.org/r/default-parameter-values)
+
+[#3 p147] 6.3 Variable scope
+6.4 Parameters
+6.5 Return values
+6.6 Keyword arguments
+6.7 Chapter summary
+Introduction
+Functions are the next step toward creating optimized code as a software developer. If the same block of code
+is reused repeatedly, a function allows the programmer to write the block of code once, name the block, and
+use the code as many times as needed by calling the block by name. Functions can read in values and return
+values to perform tasks, including complex calculations.",0,Filter Functions applied but top-3 identical to B; no evidence.
