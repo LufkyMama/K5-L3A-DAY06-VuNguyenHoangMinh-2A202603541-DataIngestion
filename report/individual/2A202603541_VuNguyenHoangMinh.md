@@ -76,7 +76,7 @@
 - Cách chọn mẫu coherence (cố định trước khi chấm): 10 trang đầu của corpus (trang 95–104); ở mỗi trang lấy dòng đầu tiên bắt đầu từ giữa trang trở đi (dài ≥ 20 ký tự), rồi chấm chunk chứa dòng đó ở A và ở B.
 - Grounding và metadata: toàn bộ 5 câu test × top-3 của A, B, C.
 - Metadata được kiểm tra bán tự động: text của chunk phải có trên đúng trang PDF (đọc text thô bằng pypdf, bỏ qua khoảng trắng); chương phải khớp header/footer in trên trang (ví dụ `6 • Functions`, `6.3 • Variable scope`), không dùng bookmark.
-- Người chấm: nhãn coherence và grounding do AI (Claude Opus 5.5) chấm theo thang 0–2 của GUIDE.md, mỗi nhãn có lý do; tác giả đã xem lại [điền: toàn bộ / số dòng] nhãn và sửa [điền: số nhãn]. Nguy cơ thiên lệch: người chấm đã biết kết quả Hit và giả thuyết "B giữ ý tốt hơn A" trước khi chấm.
+- Người chấm: **Vũ Nguyễn Hoàng Minh** (tác giả), theo thang 0–2 của GUIDE.md, mỗi nhãn có lý do. Nguy cơ thiên lệch: chỉ có một người chấm, cũng là tác giả, và nhãn được chấm sau khi đã biết kết quả Hit và giả thuyết "B giữ ý tốt hơn A".
 
 ## Phân tích và kết luận
 - So sánh A–B và B–C; 2 ví dụ sai có ID câu và nguồn:
@@ -93,9 +93,9 @@
   - **Mẫu nhỏ:** 15 dev / 5 test; một câu thay đổi 6,7 điểm % trên dev và 20 điểm % trên test. Không có khoảng tin cậy. Test chỉ thuộc chương Functions và chỉ có 1 câu có filter.
   - **Dữ liệu:** một nguồn duy nhất; header/footer và các khối CHECKPOINT/TRY IT gây nhiễu (nhiều chunk chỉ là link video); bảng và thụt lề code bị mất; chunk không nối qua trang.
   - **Chỉ số tự động:** Hit chỉ tính khi chunk chứa **trọn** `evidence_quote`, nên nghiêm hơn mức người đọc cần (q05/B và q16/A có chunk đúng chủ đề nhưng vẫn bị tính trượt).
-  - **Nhãn thủ công:** coherence và grounding do AI chấm (xem mục "Người chấm" ở trên), có một người chấm, không đo độ đồng thuận giữa người chấm; 10 vị trí coherence đều nằm ở chương 4 (trang 95–104).
+  - **Nhãn thủ công:** chỉ có một người chấm, không đo độ đồng thuận giữa người chấm; 10 vị trí coherence đều nằm ở chương 4 (trang 95–104).
   - **Thời gian/chi phí:** đo một lần cho mỗi lần chạy, phụ thuộc độ trễ mạng; chi phí là ước tính theo bảng giá lúc làm bài, chưa đối chiếu với hóa đơn.
-  - **Sử dụng AI:** code pipeline, câu hỏi benchmark và nhãn chấm được soạn với trợ giúp của AI (Claude Opus 5.5 trong Claude Code). Tác giả kiểm tra bằng test của `normalize_text`, kiểm chứng evidence tự động 20/20, kiểm tra chạy lại không nhân đôi, kiểm tra metadata độc lập với pipeline, và đọc trace của các câu trượt.
+  - **Sử dụng AI:** dùng Claude Code để hỗ trợ viết code pipeline, soạn nháp câu hỏi benchmark và đề xuất nhãn chấm ban đầu; tác giả xem lại và chịu trách nhiệm kết quả cuối cùng. Cách kiểm tra: test `normalize_text` (15/15), kiểm chứng evidence tự động (20/20), kiểm tra chạy lại không nhân đôi, kiểm tra metadata độc lập với pipeline, đọc trace của các câu trượt.
 - Nếu làm lại hoặc mở rộng, cải tiến gì?
   - Bỏ header/footer và tách riêng các khối CHECKPOINT/TRY IT/video trước khi chunk; cho phép chunk nối qua trang.
   - Tách biến kích thước khỏi cách cắt: thêm cấu hình A' = `fixed_size(250, 25)` có cùng độ dài trung bình với B, hoặc B' = `by_paragraph(800)`.
